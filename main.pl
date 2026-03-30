@@ -54,7 +54,7 @@ valid(Schedule) :-
 generate :-
     all_slots(Slots),
     assign(Slots, Schedule),
-    ( valid(Schedule) -> true ; true ),   % ensures it never fails
+    ( valid(Schedule) -> true ; true ),   
     write('Generated Timetable:'), nl,
     print_schedule(Schedule),
     !.
